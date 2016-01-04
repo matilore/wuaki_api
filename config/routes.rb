@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-	#constraints subdomain: 'api' do
+	constraints subdomain: 'api' do
 		namespace :v1, defaults: {format: :json} do
 
 			devise_for :users
@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 			resources :sessions, :only => [:create, :destroy]
 
   		end
-	#end
+	end
 end
